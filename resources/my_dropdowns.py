@@ -2,7 +2,7 @@
 ### Self contained DropDown widgets ###
 #######################################
 import kivy
-import resources.emojilist
+import resources.emojilist as emojilist
 from kivy.app import App
 from kivy.clock import Clock
 from kivy.uix.button import Button
