@@ -187,6 +187,11 @@ class SMail():
 			raw_source = source_data[0][1] # here's the body, which is raw headers and html and body of the whole email
 			s = email.message_from_bytes(raw_source) # convert to message object
 			source_subject = s['subject']
+			try:
+				sub = make_header(decode_header(source_subject))
+			except:
+				sub = email_subject
+			source['subject'] = str(sub)
 			print(source_subject)
 			frm = s['From']
 			add1 = re.findall("([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)", str(frm))
@@ -210,7 +215,6 @@ class SMail():
 						source_body = part.get_payload(decode=True)
 						#print(email_body)
 						break
-			src_sub = BeautifulSoup(source_subject, 'html.parser')
 			src_from = BeautifulSoup(frm, 'html.parser')
 			try: # extra check for encryption (in case user has encypted email)
 				src_body = BeautifulSoup(source_body, 'html.parser')
@@ -229,7 +233,6 @@ class SMail():
 			except: # if email is encrypted it will throw an exception
 				source['body'] = encription_warning
 			source['from'] = src_from.get_text().split('@')[0]
-			source['subject'] = src_sub.get_text()
 			ids_list.append(source['msg_id'])
 			return source
 		except:
