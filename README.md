@@ -1,3 +1,23 @@
+**Planned features before final release:**
+* Photo upload and sharing
+* Saving photos locally
+* Displaying images in replies
+* Deleting and/or archiving messages
+* Adding contacts from email addresses within messages
+* Backing up/transfering Contact books
+* A real introduction page on first time use
+
+**Planned changes to current features:**
+* Reworking the contact book page for better usability, and simpler portrayal of how it works
+* Reworking the send message Card into the main scrollview instead of a dropdown
+* Filtering for a specific Contact Book to view only messages from that Book
+* Filtering for a single contact for viewing and sending messages
+
+**Possible features:**
+* Streaming video (from trusted hosts)
+* Displaying web images (from trusted hosts)
+
+
 # What is SocialMail?
 
 A social media network, where *you* are the network.
