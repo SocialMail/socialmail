@@ -53,11 +53,11 @@ SocialMail began as an idea, as all things do. Ideally, it could have been built
 SocialMail is built with Python, and the open source Kivy module for designing natural user interfaces, and uses IMAP and SMTP protocols to access an email server. From there it displays emails, identifies and sorts replies.
 
 SocialMail development follows a number of design Pillars:
-* inter-communication with any other email client: Messages must be standard emails wherever possible, with little to no SocialMail specific encoding or headers.
-* As little imformation as possible stored on the device: local copies of emails are not stored, email references must be pulled from the email itself, and not stored as a local database. Login information, and contacts are the only currently allowed exception.
+* inter-communication with any other email client: Messages must be standard emails wherever possible, with little to no SocialMail specific encoding, headers or encription.
+* As little information as possible stored on the device: local copies of emails are not stored, email references must be pulled from the email itself, and not stored as a local database. Login information, and contacts are the only currently allowed exception.
 * Zero communication with any third party: no data collection of any kind, not even basic user statistics or number of users.
 * Safeguarding contact data: no contact data is ever shared with a recipient, all emails are sent as blind cc, only the username associated with an incoming message will be shared, if the user chooses to share that message/reply.
-* Zero advertising: even incmming html emails are stripped down to text for ease of reading. Only direct sharing of pictures and videos will be supported. 
+* Zero advertising: even incomming html emails are stripped down to text for ease of reading. Only direct sharing of pictures and videos will be supported.
 
 # Beta means Not Finished
-SocialMail is still in an expermental state and not ready for public use. Primary features are still missing, information storage is subject to change, and while the alpha has been fairly stable, as we transition to a beta release, it's still "use at your own risk."
+SocialMail is still in an expermental state and not ready for public use. Primary features are still missing, information storage is subject to change, layout is not finalized, and while the alpha has been fairly stable, as we transition to a beta release, it remains "use at your own risk."
